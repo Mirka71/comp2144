@@ -117,7 +117,7 @@ const createScene = async function() {
     scene.onePointerDown = async () => {
         if (lastHitTest && marker.isVisible) {
             // STEP 8c: Create an anchor point based on the last hit-test coordinates
-            const anchor = await anchorSystem.addAnchorPointUsingHitTestResultsAsync(lastHitTest);
+            const anchor = await anchorSystem.addAnchorPointUsingHitTestResultAsync(lastHitTest);
             // STEP 8d: Build a box to drop on the surface
             const box = buildRandomBox();
             // STEP 8e: Attach the box to the real world!
